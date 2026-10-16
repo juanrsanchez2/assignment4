@@ -31,32 +31,18 @@ The simulation uses three periodic tasks:
 - Task 2: Period = 6 ms, Execution Time = 2 ms
 - Task 3: Period = 12 ms, Execution Time = 3 ms
 
-Each task has a deadline equal to its period.
-
-The hyperperiod is calculated using the least common multiple:
-
+Each task has a deadline equal to its period. The hyperperiod is calculated using the LCM:
 LCM(4, 6, 12) = 12 ms
+Both schedulers simulate execution over one 12 ms hyperperiod.
 
-Both scheduling algorithms simulate execution over one 12 ms hyperperiod.
-
-### Rate-Monotonic Scheduling (RM)
-
-Rate-Monotonic is a preemptive scheduling algorithm that assigns fixed priorities based on task periods.
-
-Tasks with shorter periods receive higher priorities.
-
+## Rate-Monotonic Scheduling (RM)
+Rate-Monotonic is preemptive and it assigns fixed priorities based on task periods. Tasks with shorter periods receive higher priorities.
 The priority order is:
-
 1. Task 1 (4 ms)
 2. Task 2 (6 ms)
 3. Task 3 (12 ms)
 
 Higher-priority tasks can preempt lower-priority tasks when they become ready.
 
-### Earliest-Deadline-First Scheduling (EDF)
-
-Earliest-Deadline-First is a preemptive scheduling algorithm that dynamically assigns priorities based on absolute deadlines.
-
-The ready task with the earliest deadline is selected to execute.
-
-Unlike RM, EDF priorities can change as new jobs arrive.
+## Earliest-Deadline-First Scheduling (EDF)
+Earliest-Deadline-First is preemptive that dynamically assigns priorities based on absolute deadlines. The ready task with the earliest deadline is selected to execute. Unlike RM, EDF priorities can change as new jobs arrive.
