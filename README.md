@@ -46,3 +46,5 @@ Higher-priority tasks can preempt lower-priority tasks when they become ready.
 
 ## Earliest-Deadline-First Scheduling (EDF)
 Earliest-Deadline-First is preemptive that dynamically assigns priorities based on absolute deadlines. The ready task with the earliest deadline is selected to execute. Unlike RM, EDF priorities can change as new jobs arrive.
+
+
